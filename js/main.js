@@ -194,15 +194,17 @@
 
     /* ------------------------------------------------------------------
        PANTALLA DE CARGA
-       Visible mínimo 0,9 s (para que no sea un parpadeo) y máximo 2,5 s
-       (para no hacer esperar si una imagen tarda). Una vez por sesión.
+       Se queda al menos 2,2 s desde que aparece (para que se alcance a ver
+       el logo) y como máximo 4,5 s (para no hacer esperar si una imagen
+       tarda). Una vez por sesión.
        ------------------------------------------------------------------ */
     function setupSplash() {
         var splash = document.querySelector('[data-splash]');
         if (!splash || document.documentElement.classList.contains('splash-seen')) return;
 
-        var MIN_MS = 900;
-        var MAX_MS = 2500;
+        var MIN_MS = 2200;
+        var MAX_MS = 4500;
+        var shownAt = Date.now();
         var hidden = false;
 
         function hide() {
@@ -210,12 +212,13 @@
             hidden = true;
             splash.classList.add('is-hidden');
             storageSet('sessionStorage', 'sm_splash', '1');
-            window.setTimeout(function () { splash.remove(); }, 600);
+            window.setTimeout(function () { splash.remove(); }, 800);
         }
 
+        // Se cuenta desde que el splash está en pantalla, no desde que
+        // empezó a cargar la página (si no, al terminar la carga se iba de una)
         function hideAfterMinimum() {
-            var elapsed = window.performance ? window.performance.now() : MIN_MS;
-            window.setTimeout(hide, Math.max(0, MIN_MS - elapsed));
+            window.setTimeout(hide, Math.max(0, MIN_MS - (Date.now() - shownAt)));
         }
 
         if (document.readyState === 'complete') hideAfterMinimum();
