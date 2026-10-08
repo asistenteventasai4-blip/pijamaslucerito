@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Saramantha · landing
+   Pijamas Lucerito · landing
    Mobile-first. Los colores y medidas viven en :root; cambia la marca aquí.
    Los efectos de temporada (luces, nieve, insignia) dependen de la clase
    .navidad en <html>: quítala y la página queda sin decoración navideña.
@@ -280,9 +280,10 @@ h1 em, h2 em {
 .brand__text strong {
     display: block;
     font-family: var(--font-titulo);
-    font-size: 1.15rem;
+    font-size: 1.02rem;
     color: var(--negro);
     line-height: 1.2;
+    white-space: nowrap;
 }
 .brand__text small {
     display: none;
@@ -970,6 +971,7 @@ h1 em, h2 em {
     .plans { grid-template-columns: 1fr 1fr; }
     .site-footer__grid { grid-template-columns: 1fr 1fr; }
     .site-header__cta { padding: .7em 1.4em; font-size: .95rem; }
+    .brand__text strong { font-size: 1.15rem; }
 }
 
 /* ==========================================================================

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Saramantha · comportamiento de la landing
+   Pijamas Lucerito · comportamiento de la landing
    - Atribución (?ws= y UTMs) que viaja al catálogo y a WhatsApp
    - Consentimiento de cookies antes de cargar analítica y píxel
    - Medición de clics a catálogo y WhatsApp

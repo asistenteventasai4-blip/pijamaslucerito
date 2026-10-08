@@ -1,6 +1,6 @@
 # pijamaslucerito.com
 
-Landing de marca de **Saramantha** (INDISUTEX S.A.S.). La venta se hace en el catálogo digital (`pijamasalmayor.com/saramantha`) y por WhatsApp. Esta página atrae y genera confianza, y lleva al cliente al catálogo.
+Landing de marca de **Pijamas Lucerito** (INDISUTEX S.A.S.). La venta se hace en el catálogo digital (`pijamasalmayor.com/saramantha`) y por WhatsApp. Esta página atrae y genera confianza, y lleva al cliente al catálogo.
 
 Es HTML, CSS y JS sin frameworks ni proceso de compilación. Se publica en GitHub Pages.
 
