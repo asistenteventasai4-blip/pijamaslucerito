@@ -1,0 +1,32 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code (configuración local)
+.claude/settings.local.json
+
+# Node (por si se agrega alguna herramienta de desarrollo)
+node_modules/
+npm-debug.log*
+
+# Python (servidor local de pruebas)
+__pycache__/
+
+# Archivos temporales y de trabajo
+*.log
+*.tmp
+*.bak
+tmp/
+screenshots/
+
+# Variables de entorno y credenciales
+.env
+.env.*
