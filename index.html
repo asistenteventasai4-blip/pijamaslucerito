@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es-CO" class="navidad">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://dowbsbxvxjzjjhyqmyfr.supabase.co" crossorigin>
     <link rel="preload" as="image" href="https://dowbsbxvxjzjjhyqmyfr.supabase.co/storage/v1/object/public/archivos/jmpycl1hlbi_1789404698831.webp" fetchpriority="high">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800;900&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Datos estructurados. Si cambias una pregunta frecuente en la página,
@@ -99,8 +99,6 @@
         <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
         <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
         <symbol id="i-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
-        <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
-        <symbol id="i-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
         <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
         <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
     </svg>
@@ -112,43 +110,37 @@
     <div class="ticker" role="note" aria-label="Beneficios">
         <div class="ticker__track">
             <ul class="ticker__list">
-                <li>Pago contra entrega</li>
-                <li>Envíos a toda Colombia</li>
-                <li>Precio por mayor desde 6 prendas</li>
-                <li>Fabricación propia en Cali</li>
-                <li>Diseños sublimados exclusivos</li>
+                <li>🎨 Diseños exclusivos sublimados</li>
+                <li class="ticker__pill">📦 Envíos a toda Colombia</li>
+                <li>🛍️ Venta por mayor y detal</li>
+                <li class="ticker__pill">💵 Pago contra entrega</li>
+                <li>💎 Calidad que enamora · Cali, Colombia 🇨🇴</li>
+                <li class="ticker__pill">🎄 Pijamas navideñas para toda la familia</li>
             </ul>
             <ul class="ticker__list" aria-hidden="true">
-                <li>Pago contra entrega</li>
-                <li>Envíos a toda Colombia</li>
-                <li>Precio por mayor desde 6 prendas</li>
-                <li>Fabricación propia en Cali</li>
-                <li>Diseños sublimados exclusivos</li>
+                <li>🎨 Diseños exclusivos sublimados</li>
+                <li class="ticker__pill">📦 Envíos a toda Colombia</li>
+                <li>🛍️ Venta por mayor y detal</li>
+                <li class="ticker__pill">💵 Pago contra entrega</li>
+                <li>💎 Calidad que enamora · Cali, Colombia 🇨🇴</li>
+                <li class="ticker__pill">🎄 Pijamas navideñas para toda la familia</li>
             </ul>
         </div>
     </div>
 
     <header class="site-header">
         <div class="container site-header__inner">
-            <a class="brand" href="#inicio" aria-label="Saramantha, ir al inicio">Saramantha</a>
-
-            <nav class="site-nav" id="site-nav" aria-label="Principal">
-                <ul class="site-nav__list">
-                    <li><a href="#coleccion">Colección</a></li>
-                    <li><a href="#mayor">Por mayor</a></li>
-                    <li><a href="#como-comprar">Cómo comprar</a></li>
-                    <li><a href="#preguntas">Preguntas</a></li>
-                </ul>
-            </nav>
-
-            <a class="btn btn--primary btn--sm site-header__cta" href="https://pijamasalmayor.com/saramantha" data-catalog data-track="catalog" data-track-label="header" target="_blank" rel="noopener">
-                <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg> Ver catálogo
+            <a class="brand" href="#inicio" aria-label="Saramantha, ir al inicio">
+                <img class="brand__logo" src="https://www.pijamaspormayor.com/Logo_Saramantha_Pijamas.jpeg" alt="" width="44" height="44">
+                <span class="brand__text">
+                    <strong>Saramantha</strong>
+                    <small>Pijamas exclusivas · Cali 🇨🇴</small>
+                </span>
             </a>
 
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
-                <svg class="icon nav-toggle__open" aria-hidden="true"><use href="#i-menu"/></svg>
-                <svg class="icon nav-toggle__close" aria-hidden="true"><use href="#i-close"/></svg>
-            </button>
+            <a class="btn btn--primary site-header__cta" href="https://pijamasalmayor.com/saramantha" data-catalog data-track="catalog" data-track-label="header" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg> Catálogo digital
+            </a>
         </div>
     </header>
 
@@ -156,33 +148,44 @@
 
         <!-- HERO -->
         <section class="hero" id="inicio">
+            <!-- Guirnalda navideña: la llena js/main.js; solo se ve con <html class="navidad"> -->
+            <ul class="xmas-lights" data-xmas-lights aria-hidden="true"></ul>
+
             <div class="container hero__inner">
                 <div class="hero__text">
-                    <p class="eyebrow">Hecho en Cali, Colombia</p>
-                    <h1 class="hero__title">Pijamas que <em>combinan</em> con toda tu familia</h1>
-                    <p class="hero__lead">Diseños sublimados exclusivos, tela suave y colores que no se destiñen. Para ti, para regalar o para revender.</p>
+                    <p class="badge">
+                        <span class="cmyk-dots" aria-hidden="true"><span class="c"></span><span class="m"></span><span class="y"></span></span>
+                        Saramantha · Cali, Colombia
+                    </p>
+                    <h1 class="hero__title">Pijamas que combinan con <em>toda tu familia</em></h1>
+                    <p class="hero__lead"><strong>Diseños que enamoran, comodidad que se siente ✨</strong></p>
+                    <p class="hero__sublead">Encuentra tu favorita hoy mismo 🛍️</p>
 
-                    <div class="hero__actions">
-                        <a class="btn btn--primary btn--lg" href="https://pijamasalmayor.com/saramantha" data-catalog data-track="catalog" data-track-label="hero" target="_blank" rel="noopener">
-                            Ver catálogo completo <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
-                        </a>
-                        <a class="btn btn--whatsapp btn--lg" href="https://wa.me/573106120366" data-wa="Hola, quiero información sobre las pijamas Saramantha" data-track="whatsapp" data-track-label="hero" target="_blank" rel="noopener">
-                            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Escríbenos
-                        </a>
-                    </div>
+                    <ul class="stats">
+                        <li class="stat"><span class="stat__val">100%</span><span class="stat__lbl">Sublimación premium</span></li>
+                        <li class="stat"><span class="stat__val">+6</span><span class="stat__lbl">Precio por mayor</span></li>
+                        <li class="stat"><span class="stat__val">🚚</span><span class="stat__lbl">Envíos nacionales</span></li>
+                    </ul>
+
+                    <a class="btn btn--primary btn--xl hero__cta" href="https://pijamasalmayor.com/saramantha" data-catalog data-track="catalog" data-track-label="hero" target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg> Ver catálogo completo <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                    </a>
+                    <a class="btn btn--outline hero__cta-secondary" href="https://wa.me/573106120366" data-wa="Hola, quiero información sobre las pijamas Saramantha" data-track="whatsapp" data-track-label="hero" target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Pedir asesoría por WhatsApp
+                    </a>
 
                     <ul class="hero__trust">
-                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Pagas al recibir</li>
-                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Detal y por mayor</li>
-                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Envíos nacionales</li>
+                        <li>✅ Pago contra entrega</li>
+                        <li>📦 Envíos a toda Colombia</li>
+                        <li>🎨 Diseños exclusivos</li>
                     </ul>
                 </div>
 
                 <figure class="hero__media">
+                    <span class="xmas-badge">🎄 Colección navideña</span>
                     <img src="https://dowbsbxvxjzjjhyqmyfr.supabase.co/storage/v1/object/public/archivos/jmpycl1hlbi_1789404698831.webp"
                          alt="Familia de cinco personas con pijamas navideñas iguales, estampado Merry Christmas"
                          width="1000" height="1333" fetchpriority="high" decoding="async">
-                    <figcaption class="hero__tag">Pijama Familiar Navideña</figcaption>
                 </figure>
             </div>
         </section>
@@ -190,40 +193,42 @@
         <!-- BARRA DE CONFIANZA -->
         <section class="proof" aria-label="Por qué comprarnos">
             <ul class="container proof__list">
-                <li class="proof__item">
-                    <svg class="icon" aria-hidden="true"><use href="#i-cash"/></svg>
-                    <div><strong>Pago contra entrega</strong><span>O transferencia Nequi / Bancolombia</span></div>
-                </li>
-                <li class="proof__item">
-                    <svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg>
-                    <div><strong>Envíos a toda Colombia</strong><span>De 2 a 5 días hábiles</span></div>
-                </li>
-                <li class="proof__item">
-                    <svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg>
-                    <div><strong>Por mayor desde 6</strong><span>Ideal para revender</span></div>
-                </li>
-                <li class="proof__item">
-                    <svg class="icon" aria-hidden="true"><use href="#i-scissors"/></svg>
-                    <div><strong>Directo de fábrica</strong><span>Sin intermediarios</span></div>
-                </li>
+                <li class="proof__item"><span class="proof__num">💵</span><span class="proof__desc">Pago contra entrega</span></li>
+                <li class="proof__item"><span class="proof__num">100%</span><span class="proof__desc">Sublimación premium</span></li>
+                <li class="proof__item"><span class="proof__num">🇨🇴</span><span class="proof__desc">Fabricado en Cali</span></li>
+                <li class="proof__item"><span class="proof__num">2-5</span><span class="proof__desc">Días hábiles de entrega</span></li>
+                <li class="proof__item"><span class="proof__num">🚚</span><span class="proof__desc">Envíos nacionales</span></li>
             </ul>
         </section>
 
-        <!-- TEMPORADA (cambiar imagen y textos según la campaña) -->
-        <section class="season" aria-labelledby="season-title">
-            <div class="container season__inner">
-                <div class="season__media">
-                    <img src="https://dowbsbxvxjzjjhyqmyfr.supabase.co/storage/v1/object/public/archivos/jeef9dhvw5e_1789404700649.webp"
-                         alt="Pareja con pijamas navideñas a juego"
-                         width="1000" height="1333" loading="lazy" decoding="async">
+        <!-- CATÁLOGO / TEMPORADA (cambiar imagen y textos según la campaña) -->
+        <section class="catalog-cta" id="temporada" aria-labelledby="catalog-cta-title">
+            <ul class="xmas-lights" data-xmas-lights aria-hidden="true"></ul>
+            <div class="catalog-cta__bg" data-parallax
+                 style="background-image: url('https://dowbsbxvxjzjjhyqmyfr.supabase.co/storage/v1/object/public/archivos/jeef9dhvw5e_1789404700649.webp')"></div>
+            <div class="catalog-cta__overlay"></div>
+            <div class="catalog-cta__glow" aria-hidden="true"></div>
+            <div class="catalog-cta__beam" aria-hidden="true"></div>
+
+            <div class="container catalog-cta__inner">
+                <div class="catalog-cta__text">
+                    <p class="eyebrow eyebrow--light">
+                        <span class="cmyk-dots" aria-hidden="true"><span class="c"></span><span class="m"></span><span class="y"></span></span>
+                        Catálogo disponible ahora
+                    </p>
+                    <h2 class="catalog-cta__title" id="catalog-cta-title">Descubre nuestros <em>diseños exclusivos de Navidad</em></h2>
+                    <p>Pijamas para papá, mamá, hijos y pareja con el mismo estampado. Pídelas con tiempo: en diciembre la producción se agota rápido.</p>
                 </div>
-                <div class="season__text">
-                    <p class="eyebrow eyebrow--light">Temporada navideña</p>
-                    <h2 class="season__title" id="season-title">La foto familiar de este año, <em>en pijama</em></h2>
-                    <p>Pijamas navideñas para papá, mamá, hijos y pareja con el mismo estampado. Pídelas con tiempo: en diciembre la producción se agota rápido.</p>
-                    <a class="btn btn--light btn--lg" href="https://pijamasalmayor.com/saramantha" data-catalog data-track="catalog" data-track-label="temporada" target="_blank" rel="noopener">
-                        Ver diseños navideños <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <div class="catalog-cta__actions">
+                    <a class="btn btn--primary btn--xl btn--glow" href="https://pijamasalmayor.com/saramantha" data-catalog data-track="catalog" data-track-label="temporada" target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg> Ver catálogo completo
                     </a>
+                    <ul class="chips">
+                        <li>🎄 Familiares</li>
+                        <li>💑 Pareja</li>
+                        <li>👚 Conjuntos</li>
+                        <li>🛏️ Batolas</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -232,7 +237,7 @@
         <section class="section" id="coleccion" aria-labelledby="coleccion-title">
             <div class="container">
                 <header class="section__head">
-                    <p class="eyebrow">Nuestra colección</p>
+                    <p class="eyebrow">✨ Nuestra colección</p>
                     <h2 class="section__title" id="coleccion-title">Encuentra tu <em>pijama ideal</em></h2>
                     <p class="section__lead">Pijamas, batolas, conjuntos y más, para dama, niños, pareja y toda la familia.</p>
                 </header>
@@ -284,7 +289,7 @@
         <section class="section section--tinted" aria-labelledby="destacados-title">
             <div class="container">
                 <header class="section__head">
-                    <p class="eyebrow">Las favoritas</p>
+                    <p class="eyebrow">💖 Las favoritas</p>
                     <h2 class="section__title" id="destacados-title">Diseños que <em>más se piden</em></h2>
                 </header>
 
@@ -337,7 +342,7 @@
         <section class="section" id="nosotros" aria-labelledby="nosotros-title">
             <div class="container">
                 <header class="section__head">
-                    <p class="eyebrow">Por qué Saramantha</p>
+                    <p class="eyebrow">🏆 Por qué Saramantha</p>
                     <h2 class="section__title" id="nosotros-title">Hechas por nosotros, <em>pensadas para ti</em></h2>
                 </header>
 
@@ -380,7 +385,7 @@
         <section class="section section--dark" id="mayor" aria-labelledby="mayor-title">
             <div class="container">
                 <header class="section__head">
-                    <p class="eyebrow eyebrow--light">Detal y por mayor</p>
+                    <p class="eyebrow eyebrow--light">🛍️ Detal y por mayor</p>
                     <h2 class="section__title" id="mayor-title">Para ti o <em>para revender</em></h2>
                 </header>
 
@@ -417,7 +422,7 @@
         <section class="section" id="como-comprar" aria-labelledby="comprar-title">
             <div class="container">
                 <header class="section__head">
-                    <p class="eyebrow">Fácil y seguro</p>
+                    <p class="eyebrow">🔒 Fácil y seguro</p>
                     <h2 class="section__title" id="comprar-title">Así de <em>fácil</em> es pedir</h2>
                 </header>
 
@@ -448,7 +453,7 @@
         <section class="section section--tinted social" id="redes" aria-labelledby="redes-title" hidden>
             <div class="container">
                 <header class="section__head">
-                    <p class="eyebrow">Comunidad</p>
+                    <p class="eyebrow">📱 Comunidad</p>
                     <h2 class="section__title" id="redes-title">Síguenos y mira <em>los diseños nuevos</em></h2>
                 </header>
                 <ul class="social__list">
@@ -463,7 +468,7 @@
         <section class="section" id="preguntas" aria-labelledby="faq-title">
             <div class="container container--narrow">
                 <header class="section__head">
-                    <p class="eyebrow">Resolvemos tus dudas</p>
+                    <p class="eyebrow">💬 Resolvemos tus dudas</p>
                     <h2 class="section__title" id="faq-title">Preguntas <em>frecuentes</em></h2>
                 </header>
 
@@ -520,7 +525,10 @@
     <footer class="site-footer">
         <div class="container site-footer__grid">
             <div class="site-footer__brand">
-                <p class="brand brand--footer">Saramantha</p>
+                <p class="brand">
+                    <img class="brand__logo" src="https://www.pijamaspormayor.com/Logo_Saramantha_Pijamas.jpeg" alt="" width="44" height="44" loading="lazy">
+                    <span class="brand__text"><strong>Saramantha</strong><small>Pijamas exclusivas · Cali 🇨🇴</small></span>
+                </p>
                 <p>Pijamas sublimadas para toda la familia, fabricadas por INDISUTEX S.A.S. en Cali, Colombia. Venta al detal y por mayor.</p>
             </div>
 
@@ -530,6 +538,7 @@
                     <li><a href="https://pijamasalmayor.com/saramantha" data-catalog data-track="catalog" data-track-label="footer" target="_blank" rel="noopener">Catálogo</a></li>
                     <li><a href="#coleccion">Colección</a></li>
                     <li><a href="#mayor">Por mayor</a></li>
+                    <li><a href="#como-comprar">Cómo comprar</a></li>
                     <li><a href="#preguntas">Preguntas frecuentes</a></li>
                 </ul>
             </nav>
@@ -583,5 +592,7 @@
             <button class="btn btn--primary btn--sm" type="button" data-consent="granted">Aceptar</button>
         </div>
     </div>
+    <!-- Nieve decorativa (solo con <html class="navidad">) -->
+    <canvas class="snow" data-snow aria-hidden="true"></canvas>
 </body>
 </html>
