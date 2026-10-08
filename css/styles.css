@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Saramantha · landing
+   Pijamas Lucerito · landing
    Mobile-first. Los colores y medidas viven en :root; cambia la marca aquí.
    Los efectos de temporada (luces, nieve, insignia) dependen de la clase
    .navidad en <html>: quítala y la página queda sin decoración navideña.
@@ -210,6 +210,90 @@ h1 em, h2 em {
     font-weight: 700;
 }
 
+/* ---------- Pantalla de carga ---------- */
+.splash {
+    position: fixed;
+    inset: 0;
+    z-index: 400;
+    display: grid;
+    place-items: center;
+    padding: var(--gutter);
+    background:
+        radial-gradient(circle at 50% 45%, var(--blanco) 0%, var(--blanco) 30%, var(--rosa-suave) 70%, #FBE3EF 100%);
+    transition: opacity .7s ease, visibility .7s ease;
+    /* Respaldo sin JS: se oculta sola a los 5 s */
+    animation: splash-out .7s ease 5s forwards;
+}
+.splash.is-hidden { opacity: 0; visibility: hidden; }
+.splash-seen .splash { display: none; }
+@keyframes splash-out {
+    to { opacity: 0; visibility: hidden; }
+}
+
+.splash__inner {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 18px;
+    text-align: center;
+}
+/* Halo suave detrás del logo */
+.splash__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(70vw, 340px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232, 23, 122, .18), rgba(0, 229, 255, .08) 45%, transparent 70%);
+    transform: translate(-50%, -60%);
+    animation: splash-glow 2.4s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+.splash__logo {
+    position: relative;
+    width: min(64vw, 280px);
+    height: auto;
+    /* el fondo blanco del logo se funde con el degradado */
+    mix-blend-mode: multiply;
+    animation:
+        splash-pop .7s cubic-bezier(.2, .9, .3, 1.25) both,
+        splash-float 3s ease-in-out .7s infinite;
+}
+.splash__bar {
+    position: relative;
+    width: 140px;
+    height: 4px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--borde);
+}
+.splash__bar span {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--gradiente);
+    transform-origin: left;
+    animation: splash-load 1.6s ease-in-out infinite;
+}
+/* Solo escala: aunque la animación no corra, el logo siempre es visible */
+@keyframes splash-pop {
+    from { transform: scale(.8) translateY(16px); }
+    to   { transform: scale(1) translateY(0); }
+}
+@keyframes splash-float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+@keyframes splash-glow {
+    from { opacity: .6; transform: translate(-50%, -60%) scale(.92); }
+    to   { opacity: 1;  transform: translate(-50%, -60%) scale(1.06); }
+}
+@keyframes splash-load {
+    0%, 100% { transform: translateX(-35%) scaleX(.45); }
+    50%      { transform: translateX(65%) scaleX(.45); }
+}
+
 /* ---------- Ticker ---------- */
 .ticker {
     position: sticky;
@@ -270,19 +354,18 @@ h1 em, h2 em {
     min-width: 0;
 }
 .brand__logo {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--rosa-suave);
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
     flex-shrink: 0;
 }
 .brand__text strong {
     display: block;
     font-family: var(--font-titulo);
-    font-size: 1.15rem;
+    font-size: 1.02rem;
     color: var(--negro);
     line-height: 1.2;
+    white-space: nowrap;
 }
 .brand__text small {
     display: none;
@@ -970,6 +1053,7 @@ h1 em, h2 em {
     .plans { grid-template-columns: 1fr 1fr; }
     .site-footer__grid { grid-template-columns: 1fr 1fr; }
     .site-header__cta { padding: .7em 1.4em; font-size: .95rem; }
+    .brand__text strong { font-size: 1.15rem; }
 }
 
 /* ==========================================================================
@@ -980,7 +1064,7 @@ h1 em, h2 em {
 
     body { padding-bottom: 0; }
 
-    .brand__logo { width: 52px; height: 52px; }
+    .brand__logo { width: 68px; height: 68px; }
     .brand__text strong { font-size: 1.3rem; }
 
     .hero { padding-block: 96px 88px; }

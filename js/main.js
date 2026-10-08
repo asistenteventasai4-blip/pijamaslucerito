@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Saramantha · comportamiento de la landing
+   Pijamas Lucerito · comportamiento de la landing
    - Atribución (?ws= y UTMs) que viaja al catálogo y a WhatsApp
    - Consentimiento de cookies antes de cargar analítica y píxel
    - Medición de clics a catálogo y WhatsApp
@@ -193,6 +193,42 @@
     var isSeason = document.documentElement.classList.contains('navidad');
 
     /* ------------------------------------------------------------------
+       PANTALLA DE CARGA
+       Se queda al menos 2,2 s desde que aparece (para que se alcance a ver
+       el logo) y como máximo 4,5 s (para no hacer esperar si una imagen
+       tarda). Una vez por sesión.
+       ------------------------------------------------------------------ */
+    function setupSplash() {
+        var splash = document.querySelector('[data-splash]');
+        if (!splash || document.documentElement.classList.contains('splash-seen')) return;
+
+        var MIN_MS = 2200;
+        var MAX_MS = 4500;
+        var shownAt = Date.now();
+        var hidden = false;
+
+        function hide() {
+            if (hidden) return;
+            hidden = true;
+            splash.classList.add('is-hidden');
+            storageSet('sessionStorage', 'sm_splash', '1');
+            window.setTimeout(function () { splash.remove(); }, 800);
+        }
+
+        // Se cuenta desde que el splash está en pantalla, no desde que
+        // empezó a cargar la página (si no, al terminar la carga se iba de una)
+        function hideAfterMinimum() {
+            window.setTimeout(hide, Math.max(0, MIN_MS - (Date.now() - shownAt)));
+        }
+
+        if (document.readyState === 'complete') hideAfterMinimum();
+        else window.addEventListener('load', hideAfterMinimum);
+        window.setTimeout(hide, MAX_MS);
+        // Tocar la pantalla la cierra de inmediato
+        splash.addEventListener('click', hide);
+    }
+
+    /* ------------------------------------------------------------------
        TEMPORADA NAVIDEÑA
        Todo se activa con <html class="navidad">. Fuera de temporada basta
        con quitar esa clase: no se crean luces ni nieve.
@@ -337,6 +373,7 @@
     decorateWhatsAppLinks();
     setupConsent();
     setupClickTracking();
+    setupSplash();
     buildXmasLights();
     setupSnow();
     setupParallax();
