@@ -193,6 +193,39 @@
     var isSeason = document.documentElement.classList.contains('navidad');
 
     /* ------------------------------------------------------------------
+       PANTALLA DE CARGA
+       Visible mínimo 0,9 s (para que no sea un parpadeo) y máximo 2,5 s
+       (para no hacer esperar si una imagen tarda). Una vez por sesión.
+       ------------------------------------------------------------------ */
+    function setupSplash() {
+        var splash = document.querySelector('[data-splash]');
+        if (!splash || document.documentElement.classList.contains('splash-seen')) return;
+
+        var MIN_MS = 900;
+        var MAX_MS = 2500;
+        var hidden = false;
+
+        function hide() {
+            if (hidden) return;
+            hidden = true;
+            splash.classList.add('is-hidden');
+            storageSet('sessionStorage', 'sm_splash', '1');
+            window.setTimeout(function () { splash.remove(); }, 600);
+        }
+
+        function hideAfterMinimum() {
+            var elapsed = window.performance ? window.performance.now() : MIN_MS;
+            window.setTimeout(hide, Math.max(0, MIN_MS - elapsed));
+        }
+
+        if (document.readyState === 'complete') hideAfterMinimum();
+        else window.addEventListener('load', hideAfterMinimum);
+        window.setTimeout(hide, MAX_MS);
+        // Tocar la pantalla la cierra de inmediato
+        splash.addEventListener('click', hide);
+    }
+
+    /* ------------------------------------------------------------------
        TEMPORADA NAVIDEÑA
        Todo se activa con <html class="navidad">. Fuera de temporada basta
        con quitar esa clase: no se crean luces ni nieve.
@@ -337,6 +370,7 @@
     decorateWhatsAppLinks();
     setupConsent();
     setupClickTracking();
+    setupSplash();
     buildXmasLights();
     setupSnow();
     setupParallax();

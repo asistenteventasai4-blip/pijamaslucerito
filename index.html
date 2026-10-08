@@ -27,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://dowbsbxvxjzjjhyqmyfr.supabase.co" crossorigin>
+    <link rel="preload" as="image" href="img/logo-512.webp">
     <link rel="preload" as="image" href="https://dowbsbxvxjzjjhyqmyfr.supabase.co/storage/v1/object/public/archivos/jmpycl1hlbi_1789404698831.webp" fetchpriority="high">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800;900&display=swap">
     <link rel="stylesheet" href="css/styles.css">
@@ -78,6 +79,9 @@
     }
     </script>
 
+    <!-- La pantalla de carga solo se muestra una vez por sesión: si ya se vio,
+         se oculta antes de pintar para que no parpadee -->
+    <script>try { if (sessionStorage.getItem('sm_splash')) document.documentElement.classList.add('splash-seen'); } catch (e) {}</script>
     <script src="js/config.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
@@ -102,6 +106,15 @@
         <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
         <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
     </svg>
+
+    <!-- Pantalla de carga (decorativa; la página está debajo y es accesible) -->
+    <div class="splash" data-splash aria-hidden="true">
+        <div class="splash__inner">
+            <span class="splash__glow"></span>
+            <img class="splash__logo" src="img/logo-512.webp" alt="" width="512" height="512">
+            <span class="splash__bar"><span></span></span>
+        </div>
+    </div>
 
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
