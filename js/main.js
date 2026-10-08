@@ -42,7 +42,7 @@
     function whatsappNumber() {
         var ws = (attribution.ws || '').toLowerCase();
         var vendedoras = CONFIG.vendedoras || {};
-        return vendedoras[ws] || CONFIG.whatsapp || '573106120366';
+        return vendedoras[ws] || CONFIG.whatsapp || '573222475957';
     }
 
     function attributionSummary() {

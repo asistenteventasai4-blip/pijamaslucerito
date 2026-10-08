@@ -6,10 +6,10 @@
    ========================================================================== */
 window.SITE_CONFIG = {
     // Catálogo donde se hacen los pedidos
-    catalogUrl: 'https://pijamasalmayor.com/saramantha',
+    catalogUrl: 'https://pijamasalmayor.com/lucerito',
 
     // WhatsApp por defecto (solo dígitos, con indicativo de país)
-    whatsapp: '573106120366',
+    whatsapp: '573222475957',
 
     // Atribución por vendedora: un enlace con ?ws=luisa usa el número de luisa.
     // Si el ws no existe aquí, se usa el número por defecto.
