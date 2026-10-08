@@ -270,11 +270,9 @@ h1 em, h2 em {
     min-width: 0;
 }
 .brand__logo {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--rosa-suave);
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
     flex-shrink: 0;
 }
 .brand__text strong {
@@ -982,7 +980,7 @@ h1 em, h2 em {
 
     body { padding-bottom: 0; }
 
-    .brand__logo { width: 52px; height: 52px; }
+    .brand__logo { width: 68px; height: 68px; }
     .brand__text strong { font-size: 1.3rem; }
 
     .hero { padding-block: 96px 88px; }
